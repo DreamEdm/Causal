@@ -20,6 +20,14 @@ In this project, we proposed a new method to support more effective and efficien
 
 This code supported by Matlab*2018b* or above version. 
 
+
+
+If want to recurrent the experimental result in article, please select "**BinaryInferenceTest.m**" or "**BinaryInferenceTest_Sample.m**" in root directory. 
+
+And you should open "**BinaryInferenceTest_f.m**" or "**BinaryInferenceTest_Sample_f.m**" in [PK_function](https://github.com/DreamEdm/Causal/tree/main/CPBG_Alg/PK_function). 
+
+Set some parameters such as "*nSample*", "*sizeZ*", then do it!
+
 ## Here is the *abstract* in article:
 
 Causal discovery is one of the most important research directions of machine learning, aiming to discover the underlying causal relationships in observed data. 
