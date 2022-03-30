@@ -1,8 +1,26 @@
-## Causal Partition Based Graph ##
+<center>
 
-In this project, we proposed a new method to support more effective and efficient
 
-Here is the **abstract** in article:
+# <center>Causal Partition Based Graph</center>
+
+In this project, we proposed a new method to support more effective and efficient causal discovery. 
+
+
+
+## Project catalog: 
+
+- CP_BaseGraph: The source code of CPBG and its experimental results.
+  - algo: Some necessary baisc algorithms to ensure CPBG doing successful. 
+  - CP_BaseGraph: The core of the method. It describe how to partition the causal graph.
+  - dataset: The network that we get from [bnlearn](https://www.bnlearn.com/), which is used to test our method. 
+  - PK_function: Some function according to scripts in root directory. 
+  - Testing_Alg: The code of methods (CP & CAPA) which we compare with CPBG.
+  - workspace: The experimental results of different parameter or strategies. 
+  - Others files: Some scripts that we compare with other methods. 
+
+This code supported by Matlab*2018b* or above version. 
+
+## Here is the *abstract* in article:
 
 Causal discovery is one of the most important research directions of machine learning, aiming to discover the underlying causal relationships in observed data. 
 
