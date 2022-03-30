@@ -10,12 +10,12 @@ In this project, we proposed a new method to support more effective and efficien
 ## Project catalog: 
 
 - CP_BaseGraph: The source code of CPBG and its experimental results.
-  - algo: Some necessary baisc algorithms to ensure CPBG doing successful. 
-  - CP_BaseGraph: The core of the method. It describe how to partition the causal graph.
-  - dataset: The network that we get from [bnlearn](https://www.bnlearn.com/), which is used to test our method. 
-  - PK_function: Some function according to scripts in root directory. 
-  - Testing_Alg: The code of methods (CP & CAPA) which we compare with CPBG.
-  - workspace: The experimental results of different parameter or strategies. 
+  - [algo](https://github.com/DreamEdm/Causal/tree/main/CPBG_Alg/algo): Some necessary baisc algorithms to ensure CPBG doing successful. 
+  - [CP_BaseGraph](https://github.com/DreamEdm/Causal/tree/main/CPBG_Alg/CP_BaseGraph): The core of the method. It describe how to partition the causal graph.
+  - [dataset](https://github.com/DreamEdm/Causal/tree/main/CPBG_Alg/dataset): The network that we get from [bnlearn](https://www.bnlearn.com/), which is used to test our method. 
+  - [PK_function](https://github.com/DreamEdm/Causal/tree/main/CPBG_Alg/PK_function): Some function according to scripts in root directory. 
+  - [Testing_Alg](https://github.com/DreamEdm/Causal/tree/main/CPBG_Alg/Testing_Alg): The code of methods (CP & CAPA) which we compare with CPBG.
+  - [workspace](https://github.com/DreamEdm/Causal/tree/main/CPBG_Alg/workspace): The experimental results of different parameter or strategies. 
   - Others files: Some scripts that we compare with other methods. 
 
 This code supported by Matlab*2018b* or above version. 
