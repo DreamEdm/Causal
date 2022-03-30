@@ -1,0 +1,306 @@
+(network 'Unamed ':probability)
+
+(var 'AppData '(Correct Incorrect_or_corrupt))
+
+(var 'DskLocal '(Greater_than_2_Mb Less_than_2_Mb))
+
+(var 'PrtSpool '(Enabled Disabled))
+
+(var 'PrtData '(Yes No))
+
+(var 'PrtCbl '(Connected Loose))
+
+(var 'PrtOn '(Yes No))
+
+(var 'PrtThread '(OK Corrupt_Buggy))
+
+(var 'GDIOUT '(Yes No))
+
+(var 'EMFOK '(Yes No))
+
+(var 'PrtDriver '(Yes No))
+
+(var 'GDIIN '(Yes No))
+
+(var 'Problem1 '(Normal_Output No_Output))
+
+(var 'PrtPaper '(Has_Paper No_Paper))
+
+(var 'DrvSet '(Correct Incorrect))
+
+(var 'NetPrint '(No__Local_printer_ Yes__Network_printer_))
+
+(var 'PrtDataOut '(Yes No))
+
+(var 'PrtPath '(Correct Incorrect))
+
+(var 'PC2PRT '(Yes No))
+
+(var 'NetOK '(Yes No))
+
+(var 'DrvOK '(Reinstalled Corrupt))
+
+(var 'PrtSel '(Yes No))
+
+(var 'PrtMem '(Greater_than_2_Mb Less_than_2Mb))
+
+(var 'LclOK '(Yes No))
+
+(var 'PrtPort '(Yes No))
+
+(var 'DeskPrntSpd '(OK Too_Slow))
+
+(var 'CblPrtHrdwrOK '(Operational Not_Operational))
+
+(var 'DSApplctn '(DOS Windows))
+
+(var 'DS_NTOK '(Yes No))
+
+(var 'DS_LCLOK '(Yes No))
+
+(var 'PrtMpTPth '(Correct Incorrect))
+
+(var 'PgOrnttnOK '(Correct Incorrect))
+
+(var 'PrntngArOK '(Correct Incorrect))
+
+(var 'ScrnFntNtPrntrFnt '(Yes No))
+
+(var 'CmpltPgPrntd '(Yes No))
+
+(var 'Problem4 '(No Yes))
+
+(var 'GrphcsRltdDrvrSttngs '(Correct Incorrect))
+
+(var 'Problem5 '(No Yes))
+
+(var 'TrTypFnts '(Yes No))
+
+(var 'FntInstlltn '(Verified Faulty))
+
+(var 'PrntrAccptsTrtyp '(Yes No))
+
+(var 'TTOK '(Yes No))
+
+(var 'GrbldOtpt '(No Yes))
+
+(var 'NtwrkCnfg '(Correct Incorrect))
+
+(var 'NnTTOK '(Yes No))
+
+(var 'AppDtGnTm '(Fast_Enough Too_Long))
+
+(var 'PrntPrcssTm '(Fast_Enough Too_Long))
+
+(var 'HrglssDrtnAftrPrnt '(Fast_Enough Too_Long))
+
+(var 'LclGrbld '(Yes No))
+
+(var 'NtGrbld '(Yes No))
+
+(var 'NnPSGrphc '(Yes No))
+
+(var 'REPEAT '(Yes__Always_the_Same_ No__Different_Each_Time_))
+
+(var 'PrtTimeOut '(Long_Enough Too_Short))
+
+(var 'PrtPScript '(Yes No))
+
+(var 'AvlblVrtlMmry '(Adequate____1Mb_ Inadequate____1_Mb_))
+
+(var 'PSERRMEM '(No_Error Low_Memory))
+
+(var 'TstpsTxt '(Over_1_Mb_Available_VM Under_1_Mb_Available_VM))
+
+(var 'GrbldPS '(No Yes))
+
+(var 'IncmpltPS '(Yes No))
+
+(var 'EPSGrphc '(No____TIF___WMF___BMP_ Yes____EPS_))
+
+(var 'PSGRAPHIC '(Yes No))
+
+(var 'FllCrrptdBffr '(Intact__not_Corrupt_ Full_or_Corrupt))
+
+(var 'AppOK '(Correct Incorrect_Corrupt))
+
+(var 'DataFile '(Correct Incorrect_Corrupt))
+
+(var 'PrtFile '(Yes No))
+
+(var 'PrtIcon '(Normal Grayed_Out))
+
+(var 'Problem6 '(No Yes))
+
+(var 'Problem3 '(No Yes))
+
+(var 'NtSpd '(OK Slow))
+
+(var 'Problem2 '(OK Too_Long))
+
+(var 'PrtQueue '(Short Long))
+
+(var 'PrtStatPaper '(No_Error Jam__Out__Bin_Full))
+
+(var 'PrtStatToner '(No_Error Low__None))
+
+(var 'PrtStatMem '(No_Error Out_of_Memory))
+
+(var 'PrtStatOff '(No_Error OFFLINE__OFF))
+
+(var 'TnrSpply '(Adequate Low))
+
+(var 'PTROFFLINE '(Online Offline))
+
+(parents 'AppData '(AppOK DataFile) '(((Correct Correct) 0.9999 1e-04) ((Incorrect_Corrupt Correct) 0 1) ((Correct Incorrect_Corrupt) 0 1) ((Incorrect_Corrupt Incorrect_Corrupt) 0 1)))
+
+(parents 'DskLocal '() '(0.97 0.03))
+
+(parents 'PrtSpool '() '(0.95 0.05))
+
+(parents 'PrtData '(PrtOn PrtPaper PC2PRT PrtMem PrtTimeOut FllCrrptdBffr TnrSpply) '(((Yes Has_Paper Yes Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Adequate) 0.99 0.01) ((No Has_Paper Yes Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((Yes No_Paper Yes Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((No No_Paper Yes Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((Yes Has_Paper No Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((No Has_Paper No Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((Yes No_Paper No Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((No No_Paper No Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((Yes Has_Paper Yes Less_than_2Mb Long_Enough Intact__not_Corrupt_ Adequate) 0.099 0.901) ((No Has_Paper Yes Less_than_2Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((Yes No_Paper Yes Less_than_2Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((No No_Paper Yes Less_than_2Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((Yes Has_Paper No Less_than_2Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((No Has_Paper No Less_than_2Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((Yes No_Paper No Less_than_2Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((No No_Paper No Less_than_2Mb Long_Enough Intact__not_Corrupt_ Adequate) 0 1) ((Yes Has_Paper Yes Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((No Has_Paper Yes Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((Yes No_Paper Yes Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((No No_Paper Yes Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((Yes Has_Paper No Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((No Has_Paper No Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((Yes No_Paper No Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((No No_Paper No Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((Yes Has_Paper Yes Less_than_2Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((No Has_Paper Yes Less_than_2Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((Yes No_Paper Yes Less_than_2Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((No No_Paper Yes Less_than_2Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((Yes Has_Paper No Less_than_2Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((No Has_Paper No Less_than_2Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((Yes No_Paper No Less_than_2Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((No No_Paper No Less_than_2Mb Too_Short Intact__not_Corrupt_ Adequate) 0 1) ((Yes Has_Paper Yes Greater_than_2_Mb Long_Enough Full_or_Corrupt Adequate) 0.0198 0.9802) ((No Has_Paper Yes Greater_than_2_Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((Yes No_Paper Yes Greater_than_2_Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((No No_Paper Yes Greater_than_2_Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((Yes Has_Paper No Greater_than_2_Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((No Has_Paper No Greater_than_2_Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((Yes No_Paper No Greater_than_2_Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((No No_Paper No Greater_than_2_Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((Yes Has_Paper Yes Less_than_2Mb Long_Enough Full_or_Corrupt Adequate) 0.00198 0.99802) ((No Has_Paper Yes Less_than_2Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((Yes No_Paper Yes Less_than_2Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((No No_Paper Yes Less_than_2Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((Yes Has_Paper No Less_than_2Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((No Has_Paper No Less_than_2Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((Yes No_Paper No Less_than_2Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((No No_Paper No Less_than_2Mb Long_Enough Full_or_Corrupt Adequate) 0 1) ((Yes Has_Paper Yes Greater_than_2_Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((No Has_Paper Yes Greater_than_2_Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((Yes No_Paper Yes Greater_than_2_Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((No No_Paper Yes Greater_than_2_Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((Yes Has_Paper No Greater_than_2_Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((No Has_Paper No Greater_than_2_Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((Yes No_Paper No Greater_than_2_Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((No No_Paper No Greater_than_2_Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((Yes Has_Paper Yes Less_than_2Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((No Has_Paper Yes Less_than_2Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((Yes No_Paper Yes Less_than_2Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((No No_Paper Yes Less_than_2Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((Yes Has_Paper No Less_than_2Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((No Has_Paper No Less_than_2Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((Yes No_Paper No Less_than_2Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((No No_Paper No Less_than_2Mb Too_Short Full_or_Corrupt Adequate) 0 1) ((Yes Has_Paper Yes Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Low) 0.0099 0.9901) ((No Has_Paper Yes Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((Yes No_Paper Yes Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((No No_Paper Yes Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((Yes Has_Paper No Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((No Has_Paper No Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((Yes No_Paper No Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((No No_Paper No Greater_than_2_Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((Yes Has_Paper Yes Less_than_2Mb Long_Enough Intact__not_Corrupt_ Low) 0.00099 0.99901) ((No Has_Paper Yes Less_than_2Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((Yes No_Paper Yes Less_than_2Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((No No_Paper Yes Less_than_2Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((Yes Has_Paper No Less_than_2Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((No Has_Paper No Less_than_2Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((Yes No_Paper No Less_than_2Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((No No_Paper No Less_than_2Mb Long_Enough Intact__not_Corrupt_ Low) 0 1) ((Yes Has_Paper Yes Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((No Has_Paper Yes Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((Yes No_Paper Yes Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((No No_Paper Yes Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((Yes Has_Paper No Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((No Has_Paper No Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((Yes No_Paper No Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((No No_Paper No Greater_than_2_Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((Yes Has_Paper Yes Less_than_2Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((No Has_Paper Yes Less_than_2Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((Yes No_Paper Yes Less_than_2Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((No No_Paper Yes Less_than_2Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((Yes Has_Paper No Less_than_2Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((No Has_Paper No Less_than_2Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((Yes No_Paper No Less_than_2Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((No No_Paper No Less_than_2Mb Too_Short Intact__not_Corrupt_ Low) 0 1) ((Yes Has_Paper Yes Greater_than_2_Mb Long_Enough Full_or_Corrupt Low) 0.000198 0.999802) ((No Has_Paper Yes Greater_than_2_Mb Long_Enough Full_or_Corrupt Low) 0 1) ((Yes No_Paper Yes Greater_than_2_Mb Long_Enough Full_or_Corrupt Low) 0 1) ((No No_Paper Yes Greater_than_2_Mb Long_Enough Full_or_Corrupt Low) 0 1) ((Yes Has_Paper No Greater_than_2_Mb Long_Enough Full_or_Corrupt Low) 0 1) ((No Has_Paper No Greater_than_2_Mb Long_Enough Full_or_Corrupt Low) 0 1) ((Yes No_Paper No Greater_than_2_Mb Long_Enough Full_or_Corrupt Low) 0 1) ((No No_Paper No Greater_than_2_Mb Long_Enough Full_or_Corrupt Low) 0 1) ((Yes Has_Paper Yes Less_than_2Mb Long_Enough Full_or_Corrupt Low) 1.98e-05 0.99998) ((No Has_Paper Yes Less_than_2Mb Long_Enough Full_or_Corrupt Low) 0 1) ((Yes No_Paper Yes Less_than_2Mb Long_Enough Full_or_Corrupt Low) 0 1) ((No No_Paper Yes Less_than_2Mb Long_Enough Full_or_Corrupt Low) 0 1) ((Yes Has_Paper No Less_than_2Mb Long_Enough Full_or_Corrupt Low) 0 1) ((No Has_Paper No Less_than_2Mb Long_Enough Full_or_Corrupt Low) 0 1) ((Yes No_Paper No Less_than_2Mb Long_Enough Full_or_Corrupt Low) 0 1) ((No No_Paper No Less_than_2Mb Long_Enough Full_or_Corrupt Low) 0 1) ((Yes Has_Paper Yes Greater_than_2_Mb Too_Short Full_or_Corrupt Low) 0 1) ((No Has_Paper Yes Greater_than_2_Mb Too_Short Full_or_Corrupt Low) 0 1) ((Yes No_Paper Yes Greater_than_2_Mb Too_Short Full_or_Corrupt Low) 0 1) ((No No_Paper Yes Greater_than_2_Mb Too_Short Full_or_Corrupt Low) 0 1) ((Yes Has_Paper No Greater_than_2_Mb Too_Short Full_or_Corrupt Low) 0 1) ((No Has_Paper No Greater_than_2_Mb Too_Short Full_or_Corrupt Low) 0 1) ((Yes No_Paper No Greater_than_2_Mb Too_Short Full_or_Corrupt Low) 0 1) ((No No_Paper No Greater_than_2_Mb Too_Short Full_or_Corrupt Low) 0 1) ((Yes Has_Paper Yes Less_than_2Mb Too_Short Full_or_Corrupt Low) 0 1) ((No Has_Paper Yes Less_than_2Mb Too_Short Full_or_Corrupt Low) 0 1) ((Yes No_Paper Yes Less_than_2Mb Too_Short Full_or_Corrupt Low) 0 1) ((No No_Paper Yes Less_than_2Mb Too_Short Full_or_Corrupt Low) 0 1) ((Yes Has_Paper No Less_than_2Mb Too_Short Full_or_Corrupt Low) 0 1) ((No Has_Paper No Less_than_2Mb Too_Short Full_or_Corrupt Low) 0 1) ((Yes No_Paper No Less_than_2Mb Too_Short Full_or_Corrupt Low) 0 1) ((No No_Paper No Less_than_2Mb Too_Short Full_or_Corrupt Low) 0 1)))
+
+(parents 'PrtCbl '() '(0.98 0.02))
+
+(parents 'PrtOn '() '(0.9 0.1))
+
+(parents 'PrtThread '() '(0.9999 1e-04))
+
+(parents 'GDIOUT '(PrtDriver GDIIN DrvSet DrvOK) '(((Yes Yes Correct Reinstalled) 0.99 0.01) ((No Yes Correct Reinstalled) 0.099 0.901) ((Yes No Correct Reinstalled) 0.099 0.901) ((No No Correct Reinstalled) 0.0099 0.9901) ((Yes Yes Incorrect Reinstalled) 0.891 0.109) ((No Yes Incorrect Reinstalled) 0.0891 0.9109) ((Yes No Incorrect Reinstalled) 0.0891 0.9109) ((No No Incorrect Reinstalled) 0.00891 0.99109) ((Yes Yes Correct Corrupt) 0.198 0.802) ((No Yes Correct Corrupt) 0.0198 0.9802) ((Yes No Correct Corrupt) 0.0198 0.9802) ((No No Correct Corrupt) 0.00198 0.99802) ((Yes Yes Incorrect Corrupt) 0.1782 0.8218) ((No Yes Incorrect Corrupt) 0.01782 0.98218) ((Yes No Incorrect Corrupt) 0.01782 0.98218) ((No No Incorrect Corrupt) 0.001782 0.998218)))
+
+(parents 'EMFOK '(AppData DskLocal PrtThread) '(((Correct Greater_than_2_Mb OK) 0.99 0.01) ((Incorrect_or_corrupt Greater_than_2_Mb OK) 0.099 0.901) ((Correct Less_than_2_Mb OK) 0 1) ((Incorrect_or_corrupt Less_than_2_Mb OK) 0 1) ((Correct Greater_than_2_Mb Corrupt_Buggy) 0.0495 0.9505) ((Incorrect_or_corrupt Greater_than_2_Mb Corrupt_Buggy) 0.00495 0.99505) ((Correct Less_than_2_Mb Corrupt_Buggy) 0 1) ((Incorrect_or_corrupt Less_than_2_Mb Corrupt_Buggy) 0 1)))
+
+(parents 'PrtDriver '() '(0.9 0.1))
+
+(parents 'GDIIN '(AppData PrtSpool EMFOK) '(((Correct Enabled Yes) 1 0) ((Incorrect_or_corrupt Enabled Yes) 0 1) ((Correct Disabled Yes) 1 0) ((Incorrect_or_corrupt Disabled Yes) 0 1) ((Correct Enabled No) 0 1) ((Incorrect_or_corrupt Enabled No) 0 1) ((Correct Disabled No) 1 0) ((Incorrect_or_corrupt Disabled No) 0 1)))
+
+(parents 'Problem1 '(PrtData) '(((Yes) 1 0) ((No) 0 1)))
+
+(parents 'PrtPaper '() '(0.98 0.02))
+
+(parents 'DrvSet '() '(0.99 0.01))
+
+(parents 'NetPrint '() '(0.8 0.2))
+
+(parents 'PrtDataOut '(GDIOUT PrtSel) '(((Yes Yes) 0.99 0.01) ((No Yes) 0 1) ((Yes No) 0 1) ((No No) 0 1)))
+
+(parents 'PrtPath '() '(0.97 0.03))
+
+(parents 'PC2PRT '(NetPrint PrtDataOut NetOK LclOK DSApplctn DS_NTOK DS_LCLOK) '(((No__Local_printer_ Yes Yes Yes DOS Yes Yes) 1 0) ((Yes__Network_printer_ Yes Yes Yes DOS Yes Yes) 1 0) ((No__Local_printer_ No Yes Yes DOS Yes Yes) 1 0) ((Yes__Network_printer_ No Yes Yes DOS Yes Yes) 1 0) ((No__Local_printer_ Yes No Yes DOS Yes Yes) 1 0) ((Yes__Network_printer_ Yes No Yes DOS Yes Yes) 1 0) ((No__Local_printer_ No No Yes DOS Yes Yes) 1 0) ((Yes__Network_printer_ No No Yes DOS Yes Yes) 1 0) ((No__Local_printer_ Yes Yes No DOS Yes Yes) 1 0) ((Yes__Network_printer_ Yes Yes No DOS Yes Yes) 1 0) ((No__Local_printer_ No Yes No DOS Yes Yes) 1 0) ((Yes__Network_printer_ No Yes No DOS Yes Yes) 1 0) ((No__Local_printer_ Yes No No DOS Yes Yes) 1 0) ((Yes__Network_printer_ Yes No No DOS Yes Yes) 1 0) ((No__Local_printer_ No No No DOS Yes Yes) 1 0) ((Yes__Network_printer_ No No No DOS Yes Yes) 1 0) ((No__Local_printer_ Yes Yes Yes Windows Yes Yes) 1 0) ((Yes__Network_printer_ Yes Yes Yes Windows Yes Yes) 1 0) ((No__Local_printer_ No Yes Yes Windows Yes Yes) 0 1) ((Yes__Network_printer_ No Yes Yes Windows Yes Yes) 0 1) ((No__Local_printer_ Yes No Yes Windows Yes Yes) 1 0) ((Yes__Network_printer_ Yes No Yes Windows Yes Yes) 0 1) ((No__Local_printer_ No No Yes Windows Yes Yes) 0 1) ((Yes__Network_printer_ No No Yes Windows Yes Yes) 0 1) ((No__Local_printer_ Yes Yes No Windows Yes Yes) 0 1) ((Yes__Network_printer_ Yes Yes No Windows Yes Yes) 1 0) ((No__Local_printer_ No Yes No Windows Yes Yes) 0 1) ((Yes__Network_printer_ No Yes No Windows Yes Yes) 0 1) ((No__Local_printer_ Yes No No Windows Yes Yes) 0 1) ((Yes__Network_printer_ Yes No No Windows Yes Yes) 0 1) ((No__Local_printer_ No No No Windows Yes Yes) 0 1) ((Yes__Network_printer_ No No No Windows Yes Yes) 0 1) ((No__Local_printer_ Yes Yes Yes DOS No Yes) 1 0) ((Yes__Network_printer_ Yes Yes Yes DOS No Yes) 0 1) ((No__Local_printer_ No Yes Yes DOS No Yes) 1 0) ((Yes__Network_printer_ No Yes Yes DOS No Yes) 0 1) ((No__Local_printer_ Yes No Yes DOS No Yes) 1 0) ((Yes__Network_printer_ Yes No Yes DOS No Yes) 0 1) ((No__Local_printer_ No No Yes DOS No Yes) 1 0) ((Yes__Network_printer_ No No Yes DOS No Yes) 0 1) ((No__Local_printer_ Yes Yes No DOS No Yes) 1 0) ((Yes__Network_printer_ Yes Yes No DOS No Yes) 0 1) ((No__Local_printer_ No Yes No DOS No Yes) 1 0) ((Yes__Network_printer_ No Yes No DOS No Yes) 0 1) ((No__Local_printer_ Yes No No DOS No Yes) 1 0) ((Yes__Network_printer_ Yes No No DOS No Yes) 0 1) ((No__Local_printer_ No No No DOS No Yes) 1 0) ((Yes__Network_printer_ No No No DOS No Yes) 0 1) ((No__Local_printer_ Yes Yes Yes Windows No Yes) 1 0) ((Yes__Network_printer_ Yes Yes Yes Windows No Yes) 1 0) ((No__Local_printer_ No Yes Yes Windows No Yes) 0 1) ((Yes__Network_printer_ No Yes Yes Windows No Yes) 0 1) ((No__Local_printer_ Yes No Yes Windows No Yes) 1 0) ((Yes__Network_printer_ Yes No Yes Windows No Yes) 0 1) ((No__Local_printer_ No No Yes Windows No Yes) 0 1) ((Yes__Network_printer_ No No Yes Windows No Yes) 0 1) ((No__Local_printer_ Yes Yes No Windows No Yes) 0 1) ((Yes__Network_printer_ Yes Yes No Windows No Yes) 1 0) ((No__Local_printer_ No Yes No Windows No Yes) 0 1) ((Yes__Network_printer_ No Yes No Windows No Yes) 0 1) ((No__Local_printer_ Yes No No Windows No Yes) 0 1) ((Yes__Network_printer_ Yes No No Windows No Yes) 0 1) ((No__Local_printer_ No No No Windows No Yes) 0 1) ((Yes__Network_printer_ No No No Windows No Yes) 0 1) ((No__Local_printer_ Yes Yes Yes DOS Yes No) 0 1) ((Yes__Network_printer_ Yes Yes Yes DOS Yes No) 1 0) ((No__Local_printer_ No Yes Yes DOS Yes No) 0 1) ((Yes__Network_printer_ No Yes Yes DOS Yes No) 1 0) ((No__Local_printer_ Yes No Yes DOS Yes No) 0 1) ((Yes__Network_printer_ Yes No Yes DOS Yes No) 1 0) ((No__Local_printer_ No No Yes DOS Yes No) 0 1) ((Yes__Network_printer_ No No Yes DOS Yes No) 1 0) ((No__Local_printer_ Yes Yes No DOS Yes No) 0 1) ((Yes__Network_printer_ Yes Yes No DOS Yes No) 1 0) ((No__Local_printer_ No Yes No DOS Yes No) 0 1) ((Yes__Network_printer_ No Yes No DOS Yes No) 1 0) ((No__Local_printer_ Yes No No DOS Yes No) 0 1) ((Yes__Network_printer_ Yes No No DOS Yes No) 1 0) ((No__Local_printer_ No No No DOS Yes No) 0 1) ((Yes__Network_printer_ No No No DOS Yes No) 1 0) ((No__Local_printer_ Yes Yes Yes Windows Yes No) 1 0) ((Yes__Network_printer_ Yes Yes Yes Windows Yes No) 1 0) ((No__Local_printer_ No Yes Yes Windows Yes No) 0 1) ((Yes__Network_printer_ No Yes Yes Windows Yes No) 0 1) ((No__Local_printer_ Yes No Yes Windows Yes No) 1 0) ((Yes__Network_printer_ Yes No Yes Windows Yes No) 0 1) ((No__Local_printer_ No No Yes Windows Yes No) 0 1) ((Yes__Network_printer_ No No Yes Windows Yes No) 0 1) ((No__Local_printer_ Yes Yes No Windows Yes No) 0 1) ((Yes__Network_printer_ Yes Yes No Windows Yes No) 1 0) ((No__Local_printer_ No Yes No Windows Yes No) 0 1) ((Yes__Network_printer_ No Yes No Windows Yes No) 0 1) ((No__Local_printer_ Yes No No Windows Yes No) 0 1) ((Yes__Network_printer_ Yes No No Windows Yes No) 0 1) ((No__Local_printer_ No No No Windows Yes No) 0 1) ((Yes__Network_printer_ No No No Windows Yes No) 0 1) ((No__Local_printer_ Yes Yes Yes DOS No No) 0 1) ((Yes__Network_printer_ Yes Yes Yes DOS No No) 0 1) ((No__Local_printer_ No Yes Yes DOS No No) 0 1) ((Yes__Network_printer_ No Yes Yes DOS No No) 0 1) ((No__Local_printer_ Yes No Yes DOS No No) 0 1) ((Yes__Network_printer_ Yes No Yes DOS No No) 0 1) ((No__Local_printer_ No No Yes DOS No No) 0 1) ((Yes__Network_printer_ No No Yes DOS No No) 0 1) ((No__Local_printer_ Yes Yes No DOS No No) 0 1) ((Yes__Network_printer_ Yes Yes No DOS No No) 0 1) ((No__Local_printer_ No Yes No DOS No No) 0 1) ((Yes__Network_printer_ No Yes No DOS No No) 0 1) ((No__Local_printer_ Yes No No DOS No No) 0 1) ((Yes__Network_printer_ Yes No No DOS No No) 0 1) ((No__Local_printer_ No No No DOS No No) 0 1) ((Yes__Network_printer_ No No No DOS No No) 0 1) ((No__Local_printer_ Yes Yes Yes Windows No No) 1 0) ((Yes__Network_printer_ Yes Yes Yes Windows No No) 1 0) ((No__Local_printer_ No Yes Yes Windows No No) 0 1) ((Yes__Network_printer_ No Yes Yes Windows No No) 0 1) ((No__Local_printer_ Yes No Yes Windows No No) 1 0) ((Yes__Network_printer_ Yes No Yes Windows No No) 0 1) ((No__Local_printer_ No No Yes Windows No No) 0 1) ((Yes__Network_printer_ No No Yes Windows No No) 0 1) ((No__Local_printer_ Yes Yes No Windows No No) 0 1) ((Yes__Network_printer_ Yes Yes No Windows No No) 1 0) ((No__Local_printer_ No Yes No Windows No No) 0 1) ((Yes__Network_printer_ No Yes No Windows No No) 0 1) ((No__Local_printer_ Yes No No Windows No No) 0 1) ((Yes__Network_printer_ Yes No No Windows No No) 0 1) ((No__Local_printer_ No No No Windows No No) 0 1) ((Yes__Network_printer_ No No No Windows No No) 0 1)))
+
+(parents 'NetOK '(PrtPath NtwrkCnfg PTROFFLINE) '(((Correct Correct Online) 0.99 0.01) ((Incorrect Correct Online) 0 1) ((Correct Incorrect Online) 0.099 0.901) ((Incorrect Incorrect Online) 0 1) ((Correct Correct Offline) 0 1) ((Incorrect Correct Offline) 0 1) ((Correct Incorrect Offline) 0 1) ((Incorrect Incorrect Offline) 0 1)))
+
+(parents 'DrvOK '() '(0.99 0.01))
+
+(parents 'PrtSel '() '(0.99 0.01))
+
+(parents 'PrtMem '() '(0.95 0.05))
+
+(parents 'LclOK '(PrtCbl PrtPort CblPrtHrdwrOK) '(((Connected Yes Operational) 0.999 0.001) ((Loose Yes Operational) 0 1) ((Connected No Operational) 0 1) ((Loose No Operational) 0 1) ((Connected Yes Not_Operational) 0.00999 0.99001) ((Loose Yes Not_Operational) 0 1) ((Connected No Not_Operational) 0 1) ((Loose No Not_Operational) 0 1)))
+
+(parents 'PrtPort '() '(0.99 0.01))
+
+(parents 'DeskPrntSpd '(PrtMem AppDtGnTm PrntPrcssTm) '(((Greater_than_2_Mb Fast_Enough Fast_Enough) 0.999 0.001) ((Less_than_2Mb Fast_Enough Fast_Enough) 0.24975 0.75025) ((Greater_than_2_Mb Too_Long Fast_Enough) 0.000998987 0.999001) ((Less_than_2Mb Too_Long Fast_Enough) 0.000249747 0.99975) ((Greater_than_2_Mb Fast_Enough Too_Long) 0.000998987 0.999001) ((Less_than_2Mb Fast_Enough Too_Long) 0.000249747 0.99975) ((Greater_than_2_Mb Too_Long Too_Long) 9.98974e-07 0.999999) ((Less_than_2Mb Too_Long Too_Long) 2.49743e-07 1)))
+
+(parents 'CblPrtHrdwrOK '() '(0.99 0.01))
+
+(parents 'DSApplctn '() '(0.15 0.85))
+
+(parents 'DS_NTOK '(AppData PrtPath PrtMpTPth NtwrkCnfg PTROFFLINE) '(((Correct Correct Correct Correct Online) 0.99 0.01) ((Incorrect_or_corrupt Correct Correct Correct Online) 0.198 0.802) ((Correct Incorrect Correct Correct Online) 0 1) ((Incorrect_or_corrupt Incorrect Correct Correct Online) 0 1) ((Correct Correct Incorrect Correct Online) 0 1) ((Incorrect_or_corrupt Correct Incorrect Correct Online) 0 1) ((Correct Incorrect Incorrect Correct Online) 0 1) ((Incorrect_or_corrupt Incorrect Incorrect Correct Online) 0 1) ((Correct Correct Correct Incorrect Online) 0.099 0.901) ((Incorrect_or_corrupt Correct Correct Incorrect Online) 0.0198 0.9802) ((Correct Incorrect Correct Incorrect Online) 0 1) ((Incorrect_or_corrupt Incorrect Correct Incorrect Online) 0 1) ((Correct Correct Incorrect Incorrect Online) 0 1) ((Incorrect_or_corrupt Correct Incorrect Incorrect Online) 0 1) ((Correct Incorrect Incorrect Incorrect Online) 0 1) ((Incorrect_or_corrupt Incorrect Incorrect Incorrect Online) 0 1) ((Correct Correct Correct Correct Offline) 0 1) ((Incorrect_or_corrupt Correct Correct Correct Offline) 0 1) ((Correct Incorrect Correct Correct Offline) 0 1) ((Incorrect_or_corrupt Incorrect Correct Correct Offline) 0 1) ((Correct Correct Incorrect Correct Offline) 0 1) ((Incorrect_or_corrupt Correct Incorrect Correct Offline) 0 1) ((Correct Incorrect Incorrect Correct Offline) 0 1) ((Incorrect_or_corrupt Incorrect Incorrect Correct Offline) 0 1) ((Correct Correct Correct Incorrect Offline) 0 1) ((Incorrect_or_corrupt Correct Correct Incorrect Offline) 0 1) ((Correct Incorrect Correct Incorrect Offline) 0 1) ((Incorrect_or_corrupt Incorrect Correct Incorrect Offline) 0 1) ((Correct Correct Incorrect Incorrect Offline) 0 1) ((Incorrect_or_corrupt Correct Incorrect Incorrect Offline) 0 1) ((Correct Incorrect Incorrect Incorrect Offline) 0 1) ((Incorrect_or_corrupt Incorrect Incorrect Incorrect Offline) 0 1)))
+
+(parents 'DS_LCLOK '(AppData PrtCbl PrtPort CblPrtHrdwrOK) '(((Correct Connected Yes Operational) 1 0) ((Incorrect_or_corrupt Connected Yes Operational) 0.1 0.9) ((Correct Loose Yes Operational) 0 1) ((Incorrect_or_corrupt Loose Yes Operational) 0 1) ((Correct Connected No Operational) 0 1) ((Incorrect_or_corrupt Connected No Operational) 0 1) ((Correct Loose No Operational) 0 1) ((Incorrect_or_corrupt Loose No Operational) 0 1) ((Correct Connected Yes Not_Operational) 0.1 0.9) ((Incorrect_or_corrupt Connected Yes Not_Operational) 0.01 0.99) ((Correct Loose Yes Not_Operational) 0 1) ((Incorrect_or_corrupt Loose Yes Not_Operational) 0 1) ((Correct Connected No Not_Operational) 0 1) ((Incorrect_or_corrupt Connected No Not_Operational) 0 1) ((Correct Loose No Not_Operational) 0 1) ((Incorrect_or_corrupt Loose No Not_Operational) 0 1)))
+
+(parents 'PrtMpTPth '() '(0.8 0.2))
+
+(parents 'PgOrnttnOK '() '(0.95 0.05))
+
+(parents 'PrntngArOK '() '(0.98 0.02))
+
+(parents 'ScrnFntNtPrntrFnt '() '(0.95 0.05))
+
+(parents 'CmpltPgPrntd '(PrtMem PgOrnttnOK PrntngArOK) '(((Greater_than_2_Mb Correct Correct) 0.99 0.01) ((Less_than_2Mb Correct Correct) 0.297 0.703) ((Greater_than_2_Mb Incorrect Correct) 0.00989999 0.9901) ((Less_than_2Mb Incorrect Correct) 0.00297 0.99703) ((Greater_than_2_Mb Correct Incorrect) 0.099 0.901) ((Less_than_2Mb Correct Incorrect) 0.0297 0.9703) ((Greater_than_2_Mb Incorrect Incorrect) 0.000989999 0.99901) ((Less_than_2Mb Incorrect Incorrect) 0.000297 0.999703)))
+
+(parents 'Problem4 '(NnPSGrphc PrtPScript PSGRAPHIC) '(((Yes Yes Yes) 0 1) ((No Yes Yes) 0 1) ((Yes No Yes) 0 1) ((No No Yes) 1 0) ((Yes Yes No) 1 0) ((No Yes No) 1 0) ((Yes No No) 0 1) ((No No No) 1 0)))
+
+(parents 'GrphcsRltdDrvrSttngs '() '(0.95 0.05))
+
+(parents 'Problem5 '(TrTypFnts TTOK NnTTOK) '(((Yes Yes Yes) 0 1) ((No Yes Yes) 0 1) ((Yes No Yes) 1 0) ((No No Yes) 0 1) ((Yes Yes No) 0 1) ((No Yes No) 1 0) ((Yes No No) 1 0) ((No No No) 1 0)))
+
+(parents 'TrTypFnts '() '(0.9 0.1))
+
+(parents 'FntInstlltn '() '(0.98 0.02))
+
+(parents 'PrntrAccptsTrtyp '() '(0.9 0.1))
+
+(parents 'TTOK '(PrtMem FntInstlltn PrntrAccptsTrtyp) '(((Greater_than_2_Mb Verified Yes) 0.99 0.01) ((Less_than_2Mb Verified Yes) 0.495 0.505) ((Greater_than_2_Mb Faulty Yes) 0.099 0.901) ((Less_than_2Mb Faulty Yes) 0.0495 0.9505) ((Greater_than_2_Mb Verified No) 0 1) ((Less_than_2Mb Verified No) 0 1) ((Greater_than_2_Mb Faulty No) 0 1) ((Less_than_2Mb Faulty No) 0 1)))
+
+(parents 'GrbldOtpt '(NetPrint LclGrbld NtGrbld) '(((No__Local_printer_ Yes Yes) 1 0) ((Yes__Network_printer_ Yes Yes) 1 0) ((No__Local_printer_ No Yes) 0 1) ((Yes__Network_printer_ No Yes) 1 0) ((No__Local_printer_ Yes No) 1 0) ((Yes__Network_printer_ Yes No) 0 1) ((No__Local_printer_ No No) 0 1) ((Yes__Network_printer_ No No) 0 1)))
+
+(parents 'NtwrkCnfg '() '(0.98 0.02))
+
+(parents 'NnTTOK '(PrtMem ScrnFntNtPrntrFnt FntInstlltn) '(((Greater_than_2_Mb Yes Verified) 0.99 0.01) ((Less_than_2Mb Yes Verified) 0.495 0.505) ((Greater_than_2_Mb No Verified) 0.099 0.901) ((Less_than_2Mb No Verified) 0.0495 0.9505) ((Greater_than_2_Mb Yes Faulty) 0.099 0.901) ((Less_than_2Mb Yes Faulty) 0.0495 0.9505) ((Greater_than_2_Mb No Faulty) 0.0099 0.9901) ((Less_than_2Mb No Faulty) 0.00495 0.99505)))
+
+(parents 'AppDtGnTm '(PrtSpool) '(((Enabled) 1 0) ((Disabled) 0.99 0.00999999)))
+
+(parents 'PrntPrcssTm '(PrtSpool) '(((Enabled) 0.99 0.00999999) ((Disabled) 1 0)))
+
+(parents 'HrglssDrtnAftrPrnt '(AppDtGnTm) '(((Fast_Enough) 0.99 0.01) ((Too_Long) 0.1 0.9)))
+
+(parents 'LclGrbld '(AppData PrtDriver PrtMem CblPrtHrdwrOK) '(((Correct Yes Greater_than_2_Mb Operational) 1 0) ((Incorrect_or_corrupt Yes Greater_than_2_Mb Operational) 0.2 0.8) ((Correct No Greater_than_2_Mb Operational) 0.4 0.6) ((Incorrect_or_corrupt No Greater_than_2_Mb Operational) 0.08 0.92) ((Correct Yes Less_than_2Mb Operational) 0.2 0.8) ((Incorrect_or_corrupt Yes Less_than_2Mb Operational) 0.04 0.96) ((Correct No Less_than_2Mb Operational) 0.08 0.92) ((Incorrect_or_corrupt No Less_than_2Mb Operational) 0.016 0.984) ((Correct Yes Greater_than_2_Mb Not_Operational) 0.1 0.9) ((Incorrect_or_corrupt Yes Greater_than_2_Mb Not_Operational) 0.02 0.98) ((Correct No Greater_than_2_Mb Not_Operational) 0.04 0.96) ((Incorrect_or_corrupt No Greater_than_2_Mb Not_Operational) 0.008 0.992) ((Correct Yes Less_than_2Mb Not_Operational) 0.02 0.98) ((Incorrect_or_corrupt Yes Less_than_2Mb Not_Operational) 0.004 0.996) ((Correct No Less_than_2Mb Not_Operational) 0.008 0.992) ((Incorrect_or_corrupt No Less_than_2Mb Not_Operational) 0.0016 0.9984)))
+
+(parents 'NtGrbld '(AppData PrtDriver PrtMem NtwrkCnfg) '(((Correct Yes Greater_than_2_Mb Correct) 1 0) ((Incorrect_or_corrupt Yes Greater_than_2_Mb Correct) 0.3 0.7) ((Correct No Greater_than_2_Mb Correct) 0.4 0.6) ((Incorrect_or_corrupt No Greater_than_2_Mb Correct) 0.12 0.88) ((Correct Yes Less_than_2Mb Correct) 0.2 0.8) ((Incorrect_or_corrupt Yes Less_than_2Mb Correct) 0.06 0.94) ((Correct No Less_than_2Mb Correct) 0.08 0.92) ((Incorrect_or_corrupt No Less_than_2Mb Correct) 0.024 0.976) ((Correct Yes Greater_than_2_Mb Incorrect) 0.4 0.6) ((Incorrect_or_corrupt Yes Greater_than_2_Mb Incorrect) 0.12 0.88) ((Correct No Greater_than_2_Mb Incorrect) 0.16 0.84) ((Incorrect_or_corrupt No Greater_than_2_Mb Incorrect) 0.048 0.952) ((Correct Yes Less_than_2Mb Incorrect) 0.08 0.92) ((Incorrect_or_corrupt Yes Less_than_2Mb Incorrect) 0.024 0.976) ((Correct No Less_than_2Mb Incorrect) 0.032 0.968) ((Incorrect_or_corrupt No Less_than_2Mb Incorrect) 0.0096 0.9904)))
+
+(parents 'NnPSGrphc '(PrtMem GrphcsRltdDrvrSttngs EPSGrphc) '(((Greater_than_2_Mb Correct No____TIF___WMF___BMP_) 0.999 0.001) ((Less_than_2Mb Correct No____TIF___WMF___BMP_) 0.24975 0.75025) ((Greater_than_2_Mb Incorrect No____TIF___WMF___BMP_) 0.0999 0.9001) ((Less_than_2Mb Incorrect No____TIF___WMF___BMP_) 0.024975 0.975025) ((Greater_than_2_Mb Correct Yes____EPS_) 0 1) ((Less_than_2Mb Correct Yes____EPS_) 0 1) ((Greater_than_2_Mb Incorrect Yes____EPS_) 0 1) ((Less_than_2Mb Incorrect Yes____EPS_) 0 1)))
+
+(parents 'REPEAT '(CblPrtHrdwrOK NtwrkCnfg) '(((Operational Correct) 1 0) ((Not_Operational Correct) 0.5 0.5) ((Operational Incorrect) 0.5 0.5) ((Not_Operational Incorrect) 0.25 0.75)))
+
+(parents 'PrtTimeOut '() '(0.94 0.06))
+
+(parents 'PrtPScript '() '(0.4 0.6))
+
+(parents 'AvlblVrtlMmry '(PrtPScript) '(((Yes) 0.98 0.02) ((No) 1 0)))
+
+(parents 'PSERRMEM '(PrtPScript AvlblVrtlMmry) '(((Yes Adequate____1Mb_) 1 0) ((No Adequate____1Mb_) 1 0) ((Yes Inadequate____1_Mb_) 0.05 0.95) ((No Inadequate____1_Mb_) 1 0)))
+
+(parents 'TstpsTxt '(PrtPScript AvlblVrtlMmry) '(((Yes Adequate____1Mb_) 0.999 0.000999987) ((No Adequate____1Mb_) 1 0) ((Yes Inadequate____1_Mb_) 0.000999987 0.999) ((No Inadequate____1_Mb_) 1 0)))
+
+(parents 'GrbldPS '(GrbldOtpt AvlblVrtlMmry) '(((No Adequate____1Mb_) 1 0) ((Yes Adequate____1Mb_) 0 1) ((No Inadequate____1_Mb_) 0.1 0.9) ((Yes Inadequate____1_Mb_) 0 1)))
+
+(parents 'IncmpltPS '(CmpltPgPrntd AvlblVrtlMmry) '(((Yes Adequate____1Mb_) 1 0) ((No Adequate____1Mb_) 0 1) ((Yes Inadequate____1_Mb_) 0.3 0.7) ((No Inadequate____1_Mb_) 0 1)))
+
+(parents 'EPSGrphc '() '(0.99 0.01))
+
+(parents 'PSGRAPHIC '(PrtMem GrphcsRltdDrvrSttngs EPSGrphc) '(((Greater_than_2_Mb Correct No____TIF___WMF___BMP_) 0.999 0.001) ((Less_than_2Mb Correct No____TIF___WMF___BMP_) 0.24975 0.75025) ((Greater_than_2_Mb Incorrect No____TIF___WMF___BMP_) 0.0999 0.9001) ((Less_than_2Mb Incorrect No____TIF___WMF___BMP_) 0.024975 0.975025) ((Greater_than_2_Mb Correct Yes____EPS_) 0.999 0.001) ((Less_than_2Mb Correct Yes____EPS_) 0.24975 0.75025) ((Greater_than_2_Mb Incorrect Yes____EPS_) 0.0999 0.9001) ((Less_than_2Mb Incorrect Yes____EPS_) 0.024975 0.975025)))
+
+(parents 'FllCrrptdBffr '() '(0.85 0.15))
+
+(parents 'AppOK '() '(0.995 0.005))
+
+(parents 'DataFile '() '(0.995 0.005))
+
+(parents 'PrtFile '(PrtDataOut) '(((Yes) 0.8 0.2) ((No) 0.2 0.8)))
+
+(parents 'PrtIcon '(NtwrkCnfg PTROFFLINE) '(((Correct Online) 0.9999 1e-04) ((Incorrect Online) 0.249975 0.750025) ((Correct Offline) 0.69993 0.30007) ((Incorrect Offline) 0.174983 0.825018)))
+
+(parents 'Problem6 '(GrbldOtpt PrtPScript GrbldPS) '(((No Yes No) 1 0) ((Yes Yes No) 1 0) ((No No No) 1 0) ((Yes No No) 0 1) ((No Yes Yes) 0 1) ((Yes Yes Yes) 0 1) ((No No Yes) 1 0) ((Yes No Yes) 0 1)))
+
+(parents 'Problem3 '(CmpltPgPrntd PrtPScript IncmpltPS) '(((Yes Yes Yes) 0 1) ((No Yes Yes) 0 1) ((Yes No Yes) 0 1) ((No No Yes) 1 0) ((Yes Yes No) 1 0) ((No Yes No) 1 0) ((Yes No No) 0 1) ((No No No) 1 0)))
+
+(parents 'NtSpd '(DeskPrntSpd NtwrkCnfg PrtQueue) '(((OK Correct Short) 0.999 0.001) ((Too_Slow Correct Short) 0 1) ((OK Incorrect Short) 0.24975 0.75025) ((Too_Slow Incorrect Short) 0 1) ((OK Correct Long) 0.24975 0.75025) ((Too_Slow Correct Long) 0 1) ((OK Incorrect Long) 0.0624375 0.937563) ((Too_Slow Incorrect Long) 0 1)))
+
+(parents 'Problem2 '(NetPrint DeskPrntSpd NtSpd) '(((No__Local_printer_ OK OK) 1 0) ((Yes__Network_printer_ OK OK) 1 0) ((No__Local_printer_ Too_Slow OK) 0 1) ((Yes__Network_printer_ Too_Slow OK) 1 0) ((No__Local_printer_ OK Slow) 1 0) ((Yes__Network_printer_ OK Slow) 0 1) ((No__Local_printer_ Too_Slow Slow) 0 1) ((Yes__Network_printer_ Too_Slow Slow) 0 1)))
+
+(parents 'PrtQueue '() '(0.99 0.01))
+
+(parents 'PrtStatPaper '(PrtPaper) '(((Has_Paper) 0.999 0.000999987) ((No_Paper) 0.000999987 0.999)))
+
+(parents 'PrtStatToner '(TnrSpply) '(((Adequate) 0.999 0.000999987) ((Low) 0.000999987 0.999)))
+
+(parents 'PrtStatMem '(PrtMem) '(((Greater_than_2_Mb) 0.999 0.000999987) ((Less_than_2Mb) 0.2 0.8)))
+
+(parents 'PrtStatOff '(PrtOn) '(((Yes) 0.99 0.00999999) ((No) 0.00999999 0.99)))
+
+(parents 'TnrSpply '() '(0.995 0.005))
+
+(parents 'PTROFFLINE '() '(0.7 0.3))
+
