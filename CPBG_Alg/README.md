@@ -5,6 +5,7 @@
 
 In this project, we proposed a new method to support more effective and efficient causal discovery. 
 
+Accepted by Applied Intelligence 
 
 
 ## Project catalog: 
